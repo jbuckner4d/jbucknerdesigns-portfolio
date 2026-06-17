@@ -1,0 +1,435 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #2c1c13;
+  background-image: radial-gradient(
+      circle at center,
+      #5a3d28 5%,
+      transparent 20%
+    ),
+    url("assets/images/gear-pattern.png");
+  background-size: 100px 100px, cover;
+  color: #f4f4f4;
+}
+
+header {
+  background: linear-gradient(135deg, #704214, #c48a69, #5a3d28);
+  color: #f4f4f4;
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 5px solid #8a5b33;
+}
+
+header nav a {
+  color: #f4f4f4;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+}
+
+header nav a:hover {
+  color: #c48a69;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.product-card {
+  background: linear-gradient(145deg, #c9b08e, #99734f);
+  border: 3px solid #8a5b33;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 10px #604020 inset;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 20px #604020 inset;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #8a5b33;
+  filter: sepia(40%);
+}
+
+.product-card h3 {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  font-family: "Cormorant Garamond", serif;
+  color: #2b1f0f;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #49392a;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.product-card button {
+  background: linear-gradient(145deg, #c88b6a, #8a5b33);
+  color: #725240;
+  border: 2px solid #604020;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.product-card button:hover {
+  background: linear-gradient(145deg, #8a5b33, #604020);
+  transform: scale(1.05);
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("assets/images/texture.png") repeat;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.info-box {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: 300px;
+  padding: 20px;
+  background-color: #5a3d28; /* Match theme background */
+  border: 1px solid #8a5b33; /* Match copper border */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  color: #f4f4f4; /* Light text color */
+}
+
+.info-box.visible {
+  display: block;
+}
+
+.info-box h4 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #c48a69; /* Copper-like heading */
+  font-weight: bold;
+}
+
+.info-box p {
+  font-size: 1.1rem; /* Slightly larger for readability */
+  color: #f4f4f4; /* Light text */
+  line-height: 1.8; /* Increase line spacing */
+  margin-bottom: 15px; /* Add space between paragraphs */
+}
+
+.info-box p span {
+  font-weight: bold; /* Highlight important terms */
+  color: #e0c18c; /* Slightly lighter color for emphasis */
+}
+#contact {
+  background: linear-gradient(135deg, #5a3d28, #704214);
+  border: 3px solid #8a5b33;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), inset 0 0 10px #3e2a21;
+  color: #f4f4f4;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 2px solid #3e2a21;
+  border-radius: 8px;
+  background-color: #2c1c13;
+  color: #f4f4f4;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  outline: none;
+  border-color: #c48a69;
+  box-shadow: 0 0 5px #c48a69;
+}
+
+#contact form button {
+  background: linear-gradient(135deg, #c88b6a, #8a5b33);
+  color: #f4f4f4;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#contact form button:hover {
+  background: linear-gradient(135deg, #8a5b33, #5a3d28);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+  }
+}
+footer {
+  text-align: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+footer p {
+  margin: 0;
+}
+/* ABOUT PAGE */
+.about-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #2c1c13;
+  background-image: radial-gradient(
+      circle at center,
+      rgba(90, 61, 40, 0.12) 5%,
+      transparent 20%
+    ),
+    url("assets/images/gear-pattern.png");
+  background-size: 100px 100px, cover;
+  color: #f4f4f4;
+  line-height: 1.7;
+}
+
+.about-page header {
+  background: linear-gradient(135deg, #5a3d28, #c48a69);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 4px solid #8a5b33;
+}
+
+.about-page header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.75rem;
+  margin: 0;
+}
+
+.about-page header nav {
+  margin-top: 1rem;
+}
+
+.about-page header nav a {
+  color: #f4f4f4;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.about-page main {
+  max-width: 1200px;
+  width: 90%;
+  margin: 3rem auto;
+  padding: 5rem;}
+.about-page main h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: #c48a69;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-page main p strong {
+  color: #c48a69;
+}
+
+.about-page .mission-line {
+  margin-top: 3rem;
+  padding: 2rem;
+  border-left: 5px solid #c48a69;
+  background: rgba(196, 138, 105, 0.12);
+  border-radius: 12px;
+}
+
+.about-page .mission-line h3 {
+  font-family: "Playfair Display", serif;
+  color: #c48a69;
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+
+.about-page .mission-line p {
+  font-size: 1.35rem;
+  line-height: 1.7;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.about-page footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.about-page footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .about-page main {
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  .about-page header h1 {
+    font-size: 2rem;
+  }
+
+  .about-page main h2 {
+    font-size: 2rem;
+  }
+
+  .about-page main p {
+    font-size: 1rem;
+  }
+}
+
+
+/* General Styles for Resume Layout */
+.resume-layout {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4; /* Light background for paper-like feel */
+  color: #333; /* Dark text for readability */
+  line-height: 1.8;
+}
+
+.resume-layout header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.resume-layout header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.resume-layout header p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.resume-layout header nav {
+  margin-top: 1rem;
+}
+
+.resume-layout header nav a {
+  color: #c48a69;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.resume-layout header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Section */
+.resume-layout main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-layout main h2 {
+  font-size: 1.8rem;
+  color: #c48a69;
+  border-bottom: 2px solid #c48a69;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.resume-layout article {
+  margin-bottom: 2rem;
+}
+
+.resume-layout article h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.resume-layout article p,
+.resume-layout article ul {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.resume-layout article ul {
+  padding-left: 1.5rem;
+}
+
+.resume-layout article ul li {
+  list-style: disc;
+}
+
+/* Contact Section */
+.resume-layout #contact {
+  margin-top: 2rem;
+}
+
+.resume-layout #contact a {
+  color: #c48a69;
+  text-decoration: none;
+}
+
+.resume-layout #contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.resume-layout footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
