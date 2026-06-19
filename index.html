@@ -3,8 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4YYSWGVRE0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4YYSWGVRE0');
+</script>
     <title>Digital Showcase</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
   </head>
   <body>
     <header>
@@ -22,23 +33,27 @@
     <main>
       <div class="product-container">
         <div
-          class="product-card"
-          onmouseover="showInfo(event, 'info1')"
-          onmouseout="hideInfo()"
-        >
-          <img
-            src="assets/images/Copper Terra logo2.pdf.png"
-            alt="Terra Restaurant Menu homepage image"
-          />
-          <h3>Terra Restaurant Menu</h3>
-          <p>
-           Upscale restaurant menu design using refined typography, spacing, and print layout to support a premium dining experience.
-          </p>
-          <a
-           
-            ><button>View Project</button></a
-          >
-        </div>
+  class="product-card"
+  onmouseover="showInfo(event, 'info1')"
+  onmouseout="hideInfo()"
+>
+  <img
+    src="assets/images/Copper Terra logo2.pdf.png"
+    alt="Terra Restaurant Menu homepage image"
+  />
+
+  <h3>Terra Restaurant Menu</h3>
+
+  <p>
+    Upscale restaurant menu design using refined typography, spacing,
+    and print layout to support a premium dining experience.
+  </p>
+
+  <a href="view_project/terra.html">
+    <button>View Project</button>
+  </a>
+
+</div>
         <div
           class="product-card"
           onmouseover="showInfo(event, 'info2')"
@@ -92,7 +107,7 @@
           onmouseout="hideInfo()"
         >
           <img
-            src="assets/images/the_barn_brunch.png"
+            src="assets/images/The_barn_brunch.png"
             alt="the barn menu homepage image"
           />
           <h3>The Barn Menu Design</h3>
